@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DataInisght Login</title>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Woops, looks like there's nothing here for you. But maybe there could be?</h1>
+        <button>Login/Signup</button>
+    </div>
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', () => netlifyIdentity.open())
+    </script>
+</body>
+
+</html>
