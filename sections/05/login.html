@@ -16,7 +16,24 @@
     </div>
     <script>
         const btn = document.querySelector('button');
-        btn.addEventListener('click', () => netlifyIdentity.open())
+        btn.addEventListener('click', () => netlifyIdentity.open());
+        (async () => {
+            if (localStorage.getItem('gotrue.user')) {
+                try {
+                    const token = await netlifyIdentity.gotrue.currentUser().jwt();
+                    console.log(token);
+                    return token;
+                } catch {
+                    err => {
+                        console.log(err);
+                        netlifyIdentity.open();
+                    };
+                }
+            } else {
+                netlifyIdentity.open();
+            }
+
+        })()
     </script>
 </body>
 
