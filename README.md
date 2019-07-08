@@ -44,3 +44,4 @@
    ```
    netlify login
    ```
+7. Join https://jamstack.slack.com and DM `@futuregerald` for an invite to the private channel
