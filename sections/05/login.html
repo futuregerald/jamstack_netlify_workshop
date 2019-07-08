@@ -17,23 +17,20 @@
     <script>
         const btn = document.querySelector('button');
         btn.addEventListener('click', () => netlifyIdentity.open());
-        (async () => {
+        const refreshUser = () => {
             if (localStorage.getItem('gotrue.user')) {
-                try {
-                    const token = await netlifyIdentity.gotrue.currentUser().jwt();
-                    console.log(token);
-                    return token;
-                } catch {
-                    err => {
+                netlifyIdentity.gotrue.currentUser().jwt()
+                    .then(jwt => console.log(token))
+                    .catch(err => {
                         console.log(err);
                         netlifyIdentity.open();
-                    };
-                }
+                    })
             } else {
                 netlifyIdentity.open();
             }
 
-        })()
+        }
+        setTimeout(refreshUser, 1000)
     </script>
 </body>
 
