@@ -33,15 +33,24 @@
    npm install netlify-cli -g
    ```
 
-5. **Connect the serverless CLI with your AWS account credentials**.
+5. **[Install the serverless CLI](https://serverless.com/framework/docs/getting-started/)**
+
+   Open up your terminal and run:
+
+   ```bash
+   npm install serverless -g
+   ```
+
+6. **Connect the serverless CLI with your AWS account credentials**.
 
    [See the docs](https://serverless.com/framework/docs/providers/aws/guide/credentials/) or [watch the video](https://www.youtube.com/watch?v=KngM5bfpttA)
 
-6. **Login to your netlify account in the CLI**
+7. **Login to your netlify account in the CLI**
 
    Open up your terminal and run:
 
    ```
    netlify login
    ```
-7. Join https://jamstack.slack.com and DM `@futuregerald` for an invite to the private channel
+
+8. Join https://jamstack.slack.com and DM `@futuregerald` for an invite to the private channel
